@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getRandomImage() {
+        let images = new Array(
+          "./images/img_1.jpeg",
+          "./images/img_2.jpeg",
+          "./images/img_3.jpeg",
+          "./images/img_4.jpeg",
+          "./images/img_5.jpeg",
+          "./images/img_6.webp",
+          "./images/img_7.jpeg",
+          "./images/img_8.jpeg",
+          "./images/img_9.jpeg"
+        );
+        let randomNum1 = Math.floor(Math.random() * images.length);
+        let randomNum2 = Math.floor(Math.random() * images.length);
+        if (randomNum1 == randomNum2) {
+          let randomNum2 = Math.floor(Math.random() * images.length);
+        }
+        document.getElementById("firstPic").src = images[randomNum1];
+      }
+    </script>
+    <img
+      src="./images/img_1.jpeg"
+      width="600px"
+      height="auto"
+      id="firstPic"
+      onclick="getRandomImage()"
+    />
+  </body>
+</html>
